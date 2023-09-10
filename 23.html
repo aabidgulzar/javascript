@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const UserMethods = {
+        about : function(){//method
+        return `${this.firstName} is ${this.age} years old`;
+       },
+        is18 : function(){//method
+        return this.age >= 18;
+       }
+    }
+    function createUser(firstName,lastName,email,age,address){
+    const user = Object.create(UserMethods);
+    user.firstName = firstName;
+    user.lastName = lastName;
+    user.email = email;
+    user.age = age;
+    user.address = address;
+    // user.about = UserMethods.about;
+    // user.is18 = UserMethods.is18;---->we can use proto to implement as much methods in a object with one line
+    return user;
+    }
+    const user1 = createUser('aabid', 'gulzar',     'abidgulzar234@gmail.com',17,'okey kulgam');
+    const user2 = createUser('harshit', 'noo',     'abcdef@gmail.com',19,'mdmn cxo');
+    const user3 = createUser('noman', 'sameer',     'nomansameer@gmail.com','13','okey. kulgam')
+    console.log(user1.about());
+    console.log(user2.about());
+    console.log(user3.about());
+    </script>
+</body>
+</html>

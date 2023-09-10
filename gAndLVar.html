@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Testing Scope in JavaScript</h1>
+    <script>
+        var aVariable="This is global scope";
+
+
+        function testScope(){
+            console.log("local variables are bounded to any function and can't be used outside of the function where it is inatialized.")
+           uninatialisedVar="Oops I forget to inatialize"
+           var aVariable="This is local scope";
+            console.log(aVariable);
+        }
+        testScope();
+
+        console.log("Global variables can be accessed any where in the file")
+        console.log(aVariable)
+        console.log(uninatialisedVar)
+    </script>
+</body>
+</html>

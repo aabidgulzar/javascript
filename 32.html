@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         class animal{
+            constructor(name,age,speed){
+                this.animalName = name;
+                this.animalAge = age;
+                this.animalSpeed = speed;
+            }
+            aName(){
+                return `animal name is ${this.animalName}`;
+            }
+            aAge(){
+                return `animal age is ${this.animalAge}`;
+            }
+            isCute(){
+                return false;
+            }
+        }
+        const info = new animal('Dog',10,45);
+        console.log(info);
+        console.log(info.aName());
+        console.log(info.aAge());
+        console.log(info.isCute());
+
+        class cat extends animal{
+            constructor(name,age,speed){
+                super(name,age);//tells the parent class to give only name and age;
+                this.animalSpeed = 45;
+            }//js first look items in the own class then if not found it will go to the super class
+            run(){
+                return `${this.animalName} is running at ${this.animalSpeed}kmph`
+            }
+        }
+        const tommy = new cat('billi', 10);
+        console.log(tommy);
+        console.log(tommy.aName());
+        console.log(tommy.aAge());
+        console.log(tommy.isCute());
+        console.log(tommy.run());
+    </script>
+</body>
+</html>

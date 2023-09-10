@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        const user1 = {
+            firstName: "Harshit",
+            age: 8,
+            about: function(hobby,fav){
+                console.log(this.firstName , this.age, hobby,fav);
+            }
+        }
+        const user2 = {
+            firstName: "Aabid",
+            age: 18,
+        }
+        
+        //call
+        user1.about.call(user2,"hahaha","wizard");
+
+        //apply
+        user1.about.apply(user2,["no","yes"]);
+
+        //bind-------->returns function;
+        const func = user1.about.bind(user2, "guitar","bach");
+        func();
+        //arrow functions this cannot be changed i.e, always window;
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //
+        const profile = {
+            gender: 'male',
+            name1: 'aabid',
+            age: 17
+        }
+
+        function pro({gender, name1, age}){
+            console.log(gender);
+            console.log(name1);
+            console.log(age);
+        }
+        pro(profile);
+
+
+
+        //callback functions
+        function myFunc2(){
+            console.log('inside my function 2');
+        }
+        function myFunc(callback){
+            console.log('i callbacked function 2')
+            callback();
+        }
+        myFunc(myFunc2);
+        
+    </script>
+</body>
+</html>

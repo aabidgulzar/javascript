@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>jquery</h1>
+    <div id="special">
+        <p class="someclass">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, ea illum! Quisquam porro, eaque nesciunt culpa quidem nulla. Quasi exercitationem vel qui maiores ad! Animi autem corrupti labore eum optio.</p>
+        <p>Eum laboriosam iste nulla officiis odio a optio sequi esse fuga suscipit dolore nemo quibusdam tenetur est blanditiis, aspernatur culpa! Officiis modi saepe animi minus unde possimus voluptates reiciendis alias?</p>
+        <p>Repudiandae, esse. Nemo, repudiandae sit blanditiis magnam quibusdam praesentium ad quisquam et natus sed aut ipsa, impedit rem minima aliquid distinctio nam quod cupiditate consectetur dolorem minus, ducimus delectus. Suscipit!</p>
+    </div>
+    <script>
+        var myText= document.querySelector('#special .someclass');
+        myText.style.fontSize="30px";
+        myText.style.border="10px solid black"
+        myText.style.backgroundColor="yellow"
+    </script>
+    <h1>2nd example</h1>
+    <div id="special2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, ea illum! Quisquam porro, eaque nesciunt culpa quidem nulla. Quasi exercitationem vel qui maiores ad! Animi autem corrupti labore eum optio.</p>
+        <p>Eum laboriosam iste nulla officiis odio a optio sequi esse fuga suscipit dolore nemo quibusdam tenetur est blanditiis, aspernatur culpa! Officiis modi saepe animi minus unde possimus voluptates reiciendis alias?</p>
+        <p>Repudiandae, esse. Nemo, repudiandae sit blanditiis magnam quibusdam praesentium ad quisquam et natus sed aut ipsa, impedit rem minima aliquid distinctio nam quod cupiditate consectetur dolorem minus, ducimus delectus. Suscipit!</p>
+    </div>
+    <script>
+    var myText1= document.querySelectorAll('#special2 p');
+    for (var k = 0; k < myText1.length; k++) {
+    myText1[k].style.color="red";
+    }
+    </script>
+
+</body>
+</html>

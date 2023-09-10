@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="one" class="mybuttons">one</button>
+    <button id="two" class="mybuttons">two</button>
+    <button id="three" class="mybuttons">three</button>
+    <script>
+        const allButtons = document.querySelectorAll('.mybuttons');
+        allButtons.forEach((buttons)=>{
+            buttons.addEventListener('click',(e)=>{
+                e.target.style.backgroundColor = 'yellow';
+                e.target.style.color = '#333';
+            })
+        })
+    </script>
+</body>
+</html>

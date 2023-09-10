@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //object destructuring
+    const band = {
+        bandName: "led zepplin",
+        famousSong: "stairway to haven",
+        year: 1999,
+        state: 'kashmir'
+    };
+    const {bandName, famousSong, ...rest} = band;//rest creates object of remaining items
+    console.log(bandName, famousSong,
+    );
+    console.log(rest);
+    
+    </script>
+</body>
+</html>

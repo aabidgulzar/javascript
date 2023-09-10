@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //find method
+        const myArray = ["hello","cat","dog", "lion"];
+
+        function islength3(string){
+            return string.length===3;
+        }
+
+        const ans = myArray.find(islength3);
+        console.log(ans);
+
+        const users = [
+            {userId: 1, userName: "harshit"},
+            {userId: 2, userName: "aabid"},
+            {userId: 3, userName: "noman"},
+            {userId: 4, userName: "roman"},
+            {userId: 5, userName: "kamran"},
+        ];
+
+        const check = users.find((id)=>id.userId===3);
+        console.log(check);
+    </script>
+</body>
+</html>

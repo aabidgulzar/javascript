@@ -1,0 +1,55 @@
+<html>
+    <head>
+       <title>DOM traversing</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>My heading</h1>
+            <p>some useful information</p>
+        </div>
+        <script>
+
+
+            //childNodes
+            const rootNode = document.getRootNode();
+            const htmlElementNode = rootNode.childNodes[0];
+            const headElementNode = htmlElementNode.childNodes[0];
+            const textNode = htmlElementNode.childNodes[1];
+            const bodyElementNode = htmlElementNode.childNodes[2];
+            console.log(headElementNode)
+            console.log(textNode)
+            console.log(bodyElementNode)
+
+
+            //parentNodes
+            console.log(headElementNode.parentNode);
+
+            //sibling Relation
+            console.log(headElementNode.nextSibling);
+            console.log(headElementNode.nextSibling.nextSibling);
+
+            //nextElementSibling----->leaves the text node i.e, only elements sibling
+            console.log(headElementNode.nextElementSibling);
+            console.log(headElementNode.childNodes);
+
+            //h1---->parentElementcolour & bgColor
+            const h1 = document.querySelector('h1');
+            console.log(h1.parentNode);
+            h1.parentNode.style.color="red";
+            h1.parentNode.style.backgroundColor="black";
+            const body = h1.parentNode.parentNode;
+            console.log(body);
+            body.style.backgroundColor="yellow";
+
+            //querySelector element searching
+            const head = document.querySelector('head');
+            const title = head.querySelector('title');
+            console.log(title);
+
+
+            //children------>gives only Element nodes of the parent tag
+            const div = document.querySelector('.container');
+            console.log(div.children);
+        </script>
+    </body>
+</html>

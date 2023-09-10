@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let firstName = '    abid    ';
+        console.log(firstName.length);
+        let newStr = firstName.trim();
+        console.log(newStr.length);
+        newStr = newStr.toUpperCase();
+        console.log(newStr);
+        newStr = newStr.toLowerCase();
+        console.log(newStr);
+        let slice = newStr.slice(0,3);/*0 to 3*/  /* slice(3) first letter*/
+        console.log(slice);
+        console.log(typeof newStr);
+        let a = 1;
+        console.log(typeof a);
+        let b = false;
+        console.log(typeof b);
+        let conv = 1 + ''; //into string
+        console.log(typeof conv);
+        console.log(typeof null) //its a bug in JS
+        let str = 22;
+        str = String/*Number*/(str);//into string
+        console.log(typeof str);
+
+
+        let str1 = 'Aabid';
+        let str2 = 'Gulzar';
+        let fullStr = str1 + " " + str2;
+        console.log(fullStr);
+
+        let intoNo1 = '12';
+        let intoNo2 = '20';
+        let convertStr = +intoNo1 + +intoNo2;//into number
+        console.log(typeof convertStr,convertStr);
+        let und;
+        console.log(typeof und);
+        console.log(Number.MAX_SAFE_INTEGER);
+        let big = BigInt(1261237747774774392001032020003300);// of let big = 83287692334...12n;
+        console.log(typeof big, big);
+    </script>
+</body>
+</html>

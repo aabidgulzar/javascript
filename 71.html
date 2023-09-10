@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //  fetch(URL).then(response =>{
+    //         return response.json();
+    //      }).then(data=>{
+    //         console.log(data)
+    //      })
+
+
+        const URL = 'https://jsonplaceholder.typicode.com/posts'
+
+
+        async function getPost(){
+            const resp = await fetch(URL);//await returned promise
+            if(resp.ok){
+            const data = await resp.json();//returned data in object
+            return data
+            }
+            else{
+                throw new Error("something went wrong")
+            }
+            
+        }//this function will always return a promise
+        const myData = getPost();
+        myData.then(data=>{
+            console.log(data)
+        }).catch(error=>{
+            console.log('inside catch\n',error)
+        })
+    </script>
+</body>
+</html>

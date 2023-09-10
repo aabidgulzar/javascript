@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //function insider object
+        function personInfo(){
+                console.log(`person name is ${this.firstName} and person age is ${this.age}`);
+         }
+        const person = {
+            firstName: "Aabid",
+            age: 8,
+            about: personInfo
+            }
+        const person1 = {
+            firstName: "Noman",
+            age: 9,
+            about: personInfo
+            }
+            function func(){
+                console.log("hello world")
+            }
+        const abc = {
+         a: 1,
+         b: 2,
+         c: func
+        }
+        person.about();
+        person1.about();
+    </script>
+</body>
+</html>

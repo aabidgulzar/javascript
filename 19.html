@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //clone using Object.assign
+        const obj = {
+            key1: 'value1',
+            key2: 'value2'
+        }
+        const obj2 = Object.assign({},obj);
+        obj.key3 = "value3"
+        console.log(obj);
+        console.log(obj2);
+
+        //?.
+        const user = {
+            firstName: "aabid"
+        }
+        console.log(user.firstName);
+        console.log(user?.adress?.houseNumber);//?.---->works like (.) but if item is not present then it would'nt show eror ((.) will show error);
+    </script>
+</body>
+</html>

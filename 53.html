@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        main{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: arial;
+        }
+        h1{
+            padding: 1rem 2rem;
+            background-color: #333;
+            color: #efefef;
+            border-radius: 1rem;
+        }
+        button{
+            padding: 1rem 2rem;
+            font-size: 1.4rem;
+            cursor: pointer;
+            margin-top: 1rem;
+            border: none;
+            outline: none;
+            transition: background-color .4s;
+            border-radius: 20px;
+        }
+        button:hover{
+            background-color: rgb(214,214,214);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>current color : <span class="currentColor">rgb(255,255,255)</span></h1>
+            <button>Change Background Colour</button>
+        </div>
+    </main>
+    <script>
+        const mainButton = document.querySelector('button');
+        const body = document.body;
+        const currentColor = document.querySelector('.currentColor')
+
+        function randomColorGenerator(){
+            const red = Math.floor(Math.random()*256);
+            const blue = Math.floor(Math.random()*256);
+            const green = Math.floor(Math.random()*256);
+            const randomColor = `rgb(${red},${blue},${green})`;
+            return randomColor;
+        }
+
+        mainButton.addEventListener('click',()=>{
+            const randomColor = randomColorGenerator();
+            body.style.background=randomColor;
+            currentColor.textContent=randomColor;
+        });
+    </script>
+</body>
+</html>

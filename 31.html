@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //class---->onject--->methods---->new
+        class animal{
+            constructor(name,age){
+                this.animalName = name;
+                this.animalAge = age; 
+            }
+            aName(){
+                return `animal name is ${this.animalName}`;
+            }
+            aAge(){
+                return `animal age is ${this.animalAge}`;
+            }
+            isCute(){
+                return false;
+            }
+        }
+        const info = new animal('Dog',10);
+        console.log(info);
+        console.log(info.aName());
+        console.log(info.aAge());
+        console.log(info.isCute());
+
+        //extends---->it helps to implement other class properties e.g,
+        class cat extends animal{//extends animal means borrows all properties of animal class---->cat = sub class & dog = parent class
+
+        }
+        const tommy = new cat('billi', 10);
+        console.log(tommy);
+        console.log(tommy.aName());
+        console.log(tommy.aAge());
+        console.log(tommy.isCute());
+    </script>
+</body>
+</html>

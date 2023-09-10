@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .box{
+            min-width: 100px;
+            min-height: 100px;
+            padding: 5rem;
+            color: white;
+            font-weight: bold;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        .grandparent{
+            background-color: #b1d4e0;
+            color: black;
+        }
+        .parent{
+            background-color: #145da0;
+        }
+        .child{
+            background-color: #0c2d48;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="grandparent box">
+            grandparent
+            <div class="parent box">
+                parent
+                <div class="child box">child</div>
+            </div>
+        </div>
+    </main>
+    <script>
+
+        //event bubbling/proprgation---->it starts after capturig
+        const grandparent = document.querySelector('.grandparent');
+        const parent = document.querySelector('.parent');
+        const child = document.querySelector('.child');
+        child.addEventListener('click',()=>{
+            console.log('bubbling child')
+        })
+        parent.addEventListener('click',()=>{
+            console.log('bubbling parent')
+        })
+        grandparent.addEventListener('click',()=>{
+            console.log('bubbling grandparent')
+        })
+        document.body.addEventListener('click',()=>{
+            console.log('bubbling body');
+        })
+
+        //capturing event--->first start capturing
+        child.addEventListener('click',()=>{
+            console.log('captured !!! child')
+        },true)
+        parent.addEventListener('click',()=>{
+            console.log('captured !!! parent')
+        },true)
+        grandparent.addEventListener('click',()=>{
+            console.log('captured !!! grandparent')
+        },true)
+        document.body.addEventListener('click',()=>{
+            console.log('captured !!! body');
+        },true)
+
+
+
+    </script>
+</body>
+</html>

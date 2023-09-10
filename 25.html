@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function hello(){
+            console.log('hello world');
+        }
+        //js function ===> function + object;
+        hello.Myproperty = "yes owned";
+        console.log(hello.Myproperty);
+
+        //nam property ----> tells func name
+        hello.prototype.abc = 'none';
+        hello.prototype.yes= 'no';
+        console.log(hello.prototype);//only funcs provide prototypes;
+    </script>
+</body>
+</html>

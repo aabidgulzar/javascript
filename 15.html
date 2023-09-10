@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //every
+        const numbers = [2,4,6,8,10];
+
+        const ans = numbers.every((number)=>number%2===0);
+        console.log(ans);//if all even then its true----->every method;
+        const cart = [
+            {id: 1, name: "mobile", price: 5000},
+            {id: 1, name: "laptop", price: 80000},
+            {id: 1, name: "Tv", price: 15000},
+            {id: 1, name: "CPU", price: 20000},
+        ]
+        //check every product >30000
+        const check = cart.every((amount)=>amount.price < 30000);
+        console.log(check);
+    </script>
+</body>
+</html>

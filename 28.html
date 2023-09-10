@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    CreateUser.prototype.about = function(){
+        return `${this.firstName} is ${this.age} years old`;
+        }
+    CreateUser.prototype.is18 = function(){
+        return this.age >= 18;
+        }
+    function CreateUser(firstName,lastName,email,age,address){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.email = email;
+    this.age = age;
+    this.address = address;
+    return this;
+    }
+    const user1 = new CreateUser('aabid', 'gulzar',     'abidgulzar234@gmail.com',17,'okey kulgam');
+    const user2 = new CreateUser('harshit', 'noo',     'abcdef@gmail.com',19,'mdmn cxo');
+    const user3 = new CreateUser('noman', 'sameer',     'nomansameer@gmail.com','13','okey. kulgam')
+    console.log(user1.about());
+    console.log(user2.about());
+    console.log(user3.about());
+
+    for(let key in user1){
+        // console.log(key);---->shows prototype keys also
+        if(user1.hasOwnProperty(key))//---->if this is its own properties
+            console.log(key);
+    }
+    </script>
+</body>
+</html>

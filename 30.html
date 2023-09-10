@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //class keyword
+    class CreateUser{
+        constructor(firstName,lastName,email,age,address){
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.email = email;
+            this.age = age;
+            this.address = address;
+        }
+        about(){
+            return `${this.firstName} is ${this.age} years old`;
+        }
+        is18(){
+            return this.age >= 18; 
+        }
+
+    }
+    const user1 = new CreateUser('aabid', 'gulzar',     'abidgulzar234@gmail.com',17,'okey kulgam');
+    const user2 = new CreateUser('harshit', 'noo',     'abcdef@gmail.com',19,'mdmn cxo');
+    const user3 = new CreateUser('noman', 'sameer',     'nomansameer@gmail.com','13','okey. kulgam')
+    console.log(user1.about(),user1.is18());
+    console.log(user2.about(),user2.is18());
+    console.log(user3.about(),user3.is18());
+    </script>
+</body>
+</html>

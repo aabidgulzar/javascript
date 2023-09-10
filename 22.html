@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const user = {
+        //     firstName: "harshit",
+        //     lastName: "vashitha",
+        //     email: "harshitvashitha@gmail.com",
+        //     age: 20,
+        //     address: "nothing",
+        //     about(){//method
+        //         return `${this.firstName} is ${this.age} years old`;
+        //     },
+        //     is18(){//method
+        //         return this .age >= 18;
+        //     }
+
+        // }
+
+        //func creating obj
+        function createUser(firstName,lastName,email,age,address){
+            const user = {};
+            user.firstName = firstName;
+            user.lastName = lastName;
+            user.email = email;
+            user.age = age;
+            user.address = address;
+            user.about = function(){//method
+                return `${this.firstName} is ${this.age} years old`;
+            };
+            user.is18 = function(){//method
+                return this .age >= 18;
+            };
+        return user;
+        }
+
+        const user1 = createUser('aabid', 'gulzar', 'abidgulzar234@gmail.com',17,'okey kulgam')
+        console.log(user1);
+        console.log(user1.is18());
+    </script>
+</body>
+</html>

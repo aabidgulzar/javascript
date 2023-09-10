@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = 112
+        //objects
+        const person = {
+            name: 'Aabid',
+            age:17
+        }
+        console.log(person);
+
+        //how to access data in objects
+        console.log(person.name);
+        console.log(person.age);
+        //another method of accessing data
+        console.log(person["name"]);
+        console.log(person["age"]);
+
+
+        //can also store arrays
+        const per = {
+            class:'10th',
+            roll_no:'1000',
+            hobbies: ["guitar","sleeping","playing"]
+        }
+        console.log(per.hobbies);
+
+        //adding key value pair
+        person.gender='male';
+        console.log(person);
+        //another method
+        person['family'] = "middle class";
+
+        //using variable in objects
+        const key = 'email';
+        person[key] = 'abidgulzar234@gmail.com';
+
+        //how to iterate object--->for in loops
+        for(let key in per){
+            console.log(`${key} : ${per[key]}`);
+        }
+        //--->object.keys
+        console.log(Object.keys(per));
+        console.log(Array.isArray(Object.keys(per)));
+        for(let key of Object.keys(per)){
+            console.log(per[key]);
+        }
+    </script>
+</body>
+</html>

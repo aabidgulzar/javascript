@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //primitive vs refrence data types;
+        //primitives
+        let num1 = 6;
+        let num2 = num1;
+        console.log(num1);
+        console.log(num2);
+        num1++;
+        console.log(num1+' & '+num2);
+
+
+
+
+        //refrence data types;
+        //array;
+        let array1 = ['item1','item2'];
+        let array2 = array1;
+
+
+
+        //cloning array
+        let array3 = array1.slice(0);
+        let arrayConc = [].concat(array1);//concat method
+        let spread = [...array1];// new method---> spread method
+
+
+
+        //cloning and adding items
+        let adding = array1.splice(0).concat('addedItem1','addedItem2')
+        let speradMet = [...array1, "spread1", "spread2"];//NW
+        
+
+        
+        console.log('one',array1);
+        console.log('two',array2);
+        array1.push('item3');
+        console.log('after pushing');
+        console.log('one',array1);
+        console.log('two',array2);
+        console.log('three',array3);
+        console.log('\n\n spread method',spread);
+        console.log('concat method',arrayConc );
+        console.log('cloning & adding extra items',adding);
+        console.log('spread cloning',speradMet);
+    </script>
+</body>
+</html>

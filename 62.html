@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script defer>
+        //promises => it is  the feature of browser not the compiler(async); it is recieved by microtask queue
+        const bucket = ['coffee', 'chips','vegetables', 'salt', 'rice'];
+        const friedRicePromise = new Promise((resolve,reject)=>{
+            if(bucket.includes("vegetables") && bucket.includes("salt") && bucket.includes("rice")){
+                resolve("Fried rice");
+            }
+            else{
+                reject("couldn't do it");
+            }
+        })
+        friedRicePromise.then((myfriedRice)=>{
+            console.log('let\'s eat',myfriedRice);
+        }).catch((error)=>{
+            console.log(error)})
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Const & Let</h1>
+    <script>
+        const a=10;//its value cannot be changed throught this file;
+        console.log(a);
+        for(let i=0;i<10;i++){//let:- it is local to this block of code;
+            console.log(i);
+        }
+        console.log(i);//error its not defined here it is local to above block
+        a=20;//error const variable can't be reinitialized
+   </script>
+</body>
+</html>

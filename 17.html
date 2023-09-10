@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //sets------>duplicates not allowed
+        const numbers = new Set([1,2,3,3]);
+        console.log(numbers);
+        if(numbers.has(1)){
+            console.log('yes')
+        }
+        for(let item of numbers){
+            console.log(item);
+        }
+        const myArray = [1,1,1,1,1,2,3,4,4,3];
+        console.log(myArray);
+        const see = new Set(myArray);
+        console.log(see);
+    </script>
+</body>
+</html>

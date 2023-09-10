@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    const key1 = 'objkey1';
+    const key2 = 'objkey2';
+
+    const value1 = 'myvalue1';
+    const value2 = 'myvalue2';
+
+    const obj = {
+       [key1] : value1,
+       [key2] : value2
+    }
+    console.log(obj)
+
+    //spread operator
+    const array1 = [1,2,3];
+    const array2 = [4,5,6];
+
+    const newArray = [...array1,...array2];
+    console.log(newArray);
+    //creating array with spread method
+    const spArray = [...'123456789'];
+    console.log(spArray);
+
+    //spread operator in objects
+    const obj2 = {
+        key1: 'value1',
+        key2: 'value2',
+    };
+    const obj3 = {
+        key3: 'value3',
+        key4: 'value4',
+    };
+    const newObject = {...obj2 , ...obj3};
+    console.log(newObject)//a key executes only 1 times in object
+</script>
+</body>
+</html>

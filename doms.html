@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>1: DOM example</h1>
+    <span id="one">this is a paragraph</span>
+    <script>
+        document.getElementById('one').style.color = "red"
+    </script>
+    <h1>2: DOM example</h1>
+    <p>This is a paragraph</p>
+    <p>hello world</p>
+    <p>its me</p>
+    <p>i am learning js</p>
+    <script>
+      var ids = document.getElementsByTagName('p');
+      for(var i=0; i < ids.length; i++){
+        ids[i].style.color = "yellow";
+      }
+    </script>
+    <h1 >3: DOM example</h1>
+    <p class="class">This is a paragraph</p>
+    <p class="class">hello world</p>
+    <p class="class">its me</p>
+    <p class="class">i am learning js</p>
+    <script>
+      var class1 = document.getElementsByClassName('class');
+      for(var j=0; j < class1.length; j++){
+        if(j%2==0){
+            class1[j].style.color = "skyblue"
+        }
+        else{
+        class1[j].style.color = "orange";
+      }
+    }
+    </script>
+    
+</body>
+</html>

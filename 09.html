@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //functions---> done--->can make function inide function.
+        //arrow functions
+        const arrowFunction = (number1 , number2) =>  {
+            return number1 + number2
+        }//if parameter is only 1 then parantheses are not necassary;
+        console.log(arrowFunction(10, 30));
+
+        //hoisting
+        hello();
+        function hello(){
+            console.log('hello world');
+        }
+
+        //lexical scope
+        function myApp(){
+            const myVar ="value1"
+            function myFunc(){
+                // const myVar = "value2";
+                console.log('hello guys', myVar);
+            }
+            const myFunct2 = function(){}
+            const myFunc3 = function(){}
+            
+            console.log(myVar);
+            myFunc();
+        }
+        myApp();
+
+        //block scope and function scope--->block=let, const & var is function scope;
+
+
+        //default parameters
+
+        function addTwo(a,b){
+            if(typeof b === "undefined"){
+                b=0;
+            }
+            return a+b;
+        };
+        const ans = addTwo(4,5);
+        console.log(ans);
+    </script>
+</body>
+</html>
